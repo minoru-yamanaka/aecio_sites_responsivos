@@ -1,0 +1,42 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+}
+
+div {
+
+    border: 1px solid black;
+}
+
+div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.capa{
+    text-align: center;
+    
+}
+
+input{
+    background-color: aqua;
+    
+}
+
+/* Navbar */
+.navbar {
+    background-color: lightcoral;
+    color: white;
+    width: 100%;
+}

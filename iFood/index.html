@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+   
     <!--
 
     /* Base styles */
@@ -155,24 +155,87 @@
         }
     }
   -->
+    <style>
+        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width:  1400px;
+            display:grid;
+            grid-template-columns: repeat(12 , 1fr);
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 20px;
+        }
+
+        div, header {
+            margin: 5px;
+            border: 1px solid black;
+            background-color: yellow;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        div, .logo {
+        font-size: 24px;
+        }
+
+
+        .navbar {
+            width: 100%;
+        }
+
+        header ul {
+            display: flex;
+            gap: 10px;
+        }
+        
+        header {
+            display: flex;
+
+        }
+
+        header div a {
+            margin-left: 20px;
+            color: azul;
+        }
+
+    </style>
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+
+        
     <header class="navbar">
-        <div class="logo">
-            Logo
-        </div>
-        <ul>
-            <li href="#">Entregador</li>
-            <li href="#">Restaurante e Mercado</li>
-            <li href="#">Carreiras</li>
-            <li href="#">iFood Card</li>
-        </ul>
-        <div class="action">
-            <a ref="#">criar conta</a>
-            <a ref="#">entrar</a>
-        </div>
+            <div class="logo">
+                Logo
+            </div>
+
+            <ul>
+                <li href="#">Entregador</li>
+                <li href="#">Restaurante e Mercado</li>
+                <li href="#">Carreiras</li>
+                <li href="#">iFood Card</li>
+            </ul>
+
+            <div class="action">
+                <a ref="#">criar conta</a>
+                <a ref="#">entrar</a>
+            </div>
     </header>
+
     <main>
         <div class="capa">
             <h1>Faça mercado no iFood</h1>
@@ -186,7 +249,7 @@
 
         <!-- landing-groceries-header__tags -->
         <div class="tags">
-
+            <P>TAGS</P>
         </div>
 
         <!-- Cards / landing-v2-multi-categories -->
@@ -228,7 +291,7 @@
 
         <!-- ifood-benefits-banner -->
         <div class="ifood-benefits-banner">
-
+            <p>BANNER</p>
         </div>
         
        <!-- footer__section footer__section--about -->
@@ -247,16 +310,14 @@
         
         
 
-        </div>
-
-        
-
-        
+        </div>   
 
     </main>
+
     <footer>
 
     </footer>
+    </div>
 
 </body>
 </html>

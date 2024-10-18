@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container , article {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            gap: 5px;
+        }
+
+        header {
+            grid-column: 1/-1;
+            background-color: burlywood;
+            grid-row: 1/2;
+        }
+
+        footer {
+            grid-column: 1/-1;
+            background-color: blueviolet;
+        }
+
+        main {
+            grid-column: 1/2;
+            background-color: yellow;
+        }
+
+        article {
+            grid-column: 3/4;
+            background-color: yellow;
+        }
+
+        .teste001 {
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+            background-color: blueviolet;
+        }
+
+    </style>
+    <title>Document</title>
+
+
+</head>
+<body class="container">
+    
+    
+    <header>
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+    </header>
+
+    <main>
+        <h1>teste02</h1>
+    </main>
+
+    <article>
+        <div class="teste001">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus recusandae esse beatae, ducimus expedita illum.</p>
+        </div>
+    </article>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

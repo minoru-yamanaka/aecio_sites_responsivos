@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid </title>
+    <style>
+        body, ul, li, p {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .borda {
+            border: 1px solid black;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            /*  */
+            flex-wrap: wrap;
+        }
+        
+        .header a {
+            padding: 10px;
+            margin: 2px;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+
+        }
+
+        .menu li {
+            margin-left: 10px;
+            
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+            margin: 2px;
+        }
+
+        .botao{
+            border: 1px solid black;
+            background-color: red;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        img {
+            /* tam max */
+            max-width: 100%;
+            display: block;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin:  0 auto;
+        }
+
+        .flex > div {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        /* CSS GRID 1 */
+
+        .grid1 {
+            display: grid;
+            grid-template-columns:  1fr 1fr 1fr;
+            max-width: 800px;
+            margin: 0 auto;
+            grid-gap: 20px;
+            background-color: yellow;
+        }
+
+        .grid1 > div:nth-child( n  + 1 ){
+            background-color: orange;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            align-items: center;
+        }
+
+        .grid1 > div.anuncio {
+            grid-column: 1;
+            grid-row: 1 /5 ;
+        }
+        
+        @media (max-width: 600px) {
+            .grid1 {
+                grid-template-columns: repeat(2. 1fr);
+            }
+
+            .grid1 > div:nth-child( n  + 1 ){
+                display: block;
+            }
+
+            .grid1 > div.anuncio {
+                grid-column: auto;
+                grid-row: auto;
+            /*22:45*/
+            }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="menu , borda">LOGO</a>
+        <nav>
+            <ul class="menu , borda">
+                <li><a href="/" class="menu" >Entregador</a></li>
+                <li><a href="/" class="menu">Restaurante e Mercado</a></li>
+                <li><a href="/" class="menu">Carreiras</a></li>
+                <li><a href="/" class="menu">iFood Card</a></li>
+
+                <li><a href="/" class="menu , botao">Criar conta</a></li>
+                <li><a href="/" class="menu , botao">Entrar</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <h1>Section Flexbox</h1>
+
+    <section class="flex , borda">
+        <div class="borda">
+            <img src="img/IMG.jfif" alt="img01">
+            <p>legenda</p>
+        </div>
+        <div class="borda">
+            <img src="img/IMG.jfif" alt="img02">
+            <p>legenda</p>
+        </div>
+        <div class="borda">
+            <img src="img/IMG.jfif" alt="img03">
+            <p>legenda</p>
+        </div>
+        <div class="borda">
+            <img src="img/IMG.jfif" alt="img04">
+            <p>legenda</p>
+        </div>
+        <div class="borda">
+            <img src="img/IMG.jfif" alt="img05">
+            <p>legenda</p>
+        </div>
+        <div class="borda">
+            <img src="img/IMG.jfif" alt="img06">
+            <p>legenda</p>
+        </div>
+    </section>
+
+    <h1>Section Grid 1</h1>
+
+        <section class="grid1 , borda">
+            <div class="borda">
+                <img src="img/IMG.jfif" alt="img01">
+                <p>legenda</p>
+            </div>
+            <div class="borda">
+                <img src="img/IMG.jfif" alt="img02">
+                <p>legenda</p>
+            </div>
+            <div class="borda">
+                <img src="img/IMG.jfif" alt="img03">
+                <p>legenda</p>
+            </div>
+            <div class="borda">
+                <img src="img/IMG.jfif" alt="img04">
+                <p>legenda</p>
+            </div>
+            <div class="borda">
+                <img src="img/IMG.jfif" alt="img05">
+                <p>legenda</p>
+            </div>
+            <div class="borda">
+                <img src="img/IMG.jfif" alt="img06">
+                <p>legenda</p>
+            </div>
+
+            <div class="anuncio , borda">
+                <img src="img/IMG.jfif" alt="img03">
+                <p>anuncio</p>
+            </div>            
+        </section>
+    
+</body>
+</html>

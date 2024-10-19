@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,9 @@
     <style>
 
     * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
     body, html {
@@ -26,36 +26,55 @@
     }
 
     header {
-        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;  
+        background-color: red;
+        flex-wrap: wrap;
     }
 
-/* Container with 12-column grid layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-}
+    .menu-items {
+        display: flex;
+        justify-content: space-between;
+        background: yellow;
+        align-items:center;
+        padding: 1px;
+    }    
+            
+
+    /* Container with 12-column grid layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+    }
 
 
 
     </style>
 </head>
 <body>
-    <header>
-        <img src="/" alt="LOGO">
+    
+     <header>
+        <a href="#">logo</a>
 
         <ul>
-            <li>01</li>
-            <li>02</li>
-            <li>03</li>
+            <li href="#">Entregador</li>
+            <li href="#">Restaurante e Mercado</li>
+            <li href="#">Carreiras</li>
+            <li href="#">iFood Card</li>
         </ul>
 
-
-
+        <div class="action_div">
+            <a ref="#"> criar conta</a>
+            <a ref="#">entrar</a>
+        </div>
     </header>
+
     <main>
         <h1>teste02</h1>
     </main>

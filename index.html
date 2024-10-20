@@ -1,85 +1,304 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>iFood Clone</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+        /* Cabeçalho */
+        header {
+            background-color: #E21B25;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    body, html {
-        font-family: Arial, sans-serif;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-    ul {
-        list-style: none;
-    }
+        header nav ul li {
+            margin-left: 20px;
+        }
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 70px;  
-        background-color: red;
-        flex-wrap: wrap;
-    }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
 
-    .menu-items {
-        display: flex;
-        justify-content: space-between;
-        background: yellow;
-        align-items:center;
-        padding: 1px;
-    }    
+        /* Seção de busca */
+        .search-section {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .search-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .search-section input[type="text"] {
+            width: 60%;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 2px 5px;
+        }
+
+        .search-section input[type="submit"] {
+            padding: 15px 30px;
+            background-color: #E21B25;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        /* Seção de destaques */
+        .highlights-section {
+            padding: 30px;
+            text-align: center;
             
+            
+        }
 
-    /* Container with 12-column grid layout */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 20px;
-    }
+        .highlights-section h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
 
+        .highlights-section .card {
+            display: inline-block;
+            width: 250px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            
+        }
 
+        .highlights-section .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .highlights-section .card h4 {
+            font-size: 18px;
+            padding: 10px;
+            
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #E21B25;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            }
+
+        footer h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        footer h2 {
+            margin: 5px;
+            font-size: 10px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        footer nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+
+        footer nav ul li {
+            margin-left: 20px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
 
     </style>
 </head>
 <body>
-    
-     <header>
-        <a href="#">logo</a>
-
-        <ul>
-            <li href="#">Entregador</li>
-            <li href="#">Restaurante e Mercado</li>
-            <li href="#">Carreiras</li>
-            <li href="#">iFood Card</li>
-        </ul>
-
-        <div class="action_div">
-            <a ref="#"> criar conta</a>
-            <a ref="#">entrar</a>
-        </div>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>iFood</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Mercados</a></li>
+                <li><a href="#">Lojas</a></li>
+                <li><a href="#">Entrar</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <h1>teste02</h1>
-    </main>
+    <!-- Seção de busca -->
+    <section class="search-section">
+        <h2>Peça Comida Agora</h2>
+        <p>Entregamos tudo o que precisa na porta da sua casa, de hortifruti a itens de limpeza</p>
+        <input type="text" placeholder="Em qual endereço você está?">
+        <input type="submit" value="Ver mercados próximos">
+    </section>
+
+    <!-- Seção de categorias de mercado -->
+    <section class="highlights-section">
+        <h3>Faça mercado no iFood</h3>
+        <div class="card">
+            <h4>Frios</h4>
+        </div>
+        <div class="card">
+            <h4>Laticínios</h4>
+        </div>
+        <div class="card">
+            <h4>Feira</h4>
+        </div>
+        <div class="card">
+            <h4>Bebidas</h4>
+        </div>
+        <div class="card">
+            <h4>Doces</h4>
+        </div>
+        <div class="card">
+            <h4>Massas frescas</h4>
+        </div>
+        <div class="card">
+            <h4>Limpeza</h4>
+        </div>
+        <div class="card">
+            <h4>Padaria</h4>
+        </div>
+        <div class="card">
+            <h4>Higiene</h4>
+        </div>
+        <div class="card">
+            <h4>Congelados</h4>
+        </div>
+        <div class="card">
+            <h4>Carnes</h4>
+        </div>
+        <div class="card">
+            <h4>Cerveja</h4>
+        </div>
+    </section>
+
+    <!-- Seção de destaques de restaurantes -->
+    <section class="highlights-section">
+        <h3>Os melhores restaurantes</h3>
+        <div class="card">
+            <h4>Mcdonald's</h4>
+            <p>Lanches</p>
+        </div>
+        <div class="card">
+            <h4>Coco Bambu</h4>
+            <p>Frutos Do Mar</p>
+        </div>
+        <div class="card">
+            <h4>China in Box</h4>
+            <p>Chinesa</p>
+        </div>
+        <div class="card">
+            <h4>Habib's</h4>
+            <p>Lanches</p>
+        </div>
+        <div class="card">
+            <h4>Outback Steakhouse</h4>
+            <p>Lanches</p>
+        </div>
+        <p>Almoço a partir de 10 reais</p>
+        <p>Pratos com até 70%</p>
+    </section>
+
+    <!-- Seção de mercados -->
+    <section class="highlights-section">
+        <h3>Os melhores mercados</h3>
+        <div class="card">
+            <h4>Dia Supermercado</h4>
+        </div>
+        <div class="card">
+            <h4>Big</h4>
+        </div>
+        <div class="card">
+            <h4>Eataly</h4>
+        </div>
+    </section>
+
+    <!-- Seção de oportunidades iFood -->
+    <section class="highlights-section">
+        <h3>Quer fazer entregas pelo iFood?</h3>
+        <p>Faça agora o seu cadastro e comece o quanto antes.</p>
+        <button>Saiba mais</button>
+
+        <h3>A sua fome de crescer está no iFood</h3>
+        <p>Cadastre seu restaurante ou o seu mercado</p>
+        <button>Saiba mais</button>
+
+        <h3>Você tem fome do quê?</h3>
+        <p>Descubra como é ser um FoodLover e faça parte da nossa revolução!</p>
+        <button>Saiba mais</button>
+
+
+    </section>
+
+    <!-- Rodapé -->
     <footer>
-        <h1>teste03</h1>
+        
+
+        <h1>iFood</h1>
+        <nav>
+           
+
+            <h2>© Copyright 2021 - iFood - Todos os direitos reservados iFood com Agência de Restaurantes Online S.A.<br>
+                CNPJ 14.380.200/0001-21 / Avenida dos Autonomistas, nº 1496, Vila Yara, Osasco/SP - CEP 06.020-902</h2>
+
+                <ul>
+                    <li><a href="#">Site Institucional</a></li>
+                        
+                    <li><a href="#">Fale conosco</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Entregadores</a></li>
+    
+                    
+                </ul>
+
+            
+        </nav>
+        
     </footer>
 </body>
 </html>

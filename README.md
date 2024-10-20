@@ -17,3 +17,5 @@ https://www.ifood.com.br/
 https://www.fundsexplorer.com.br/funds/deva11
 
 *O ideal é que o projeto esteja eu próprio repositório, mas caso encontre dificuldades, faça upload do mesmo em uma pasta em seu repositório de aulas e envie o link diretamente dessa pasta.
+
+[Click aqui para visualizar minha entrega/site](https://minoru-yamanaka.github.io/aecio_sites_responsivos/)

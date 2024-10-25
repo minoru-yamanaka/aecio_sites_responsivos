@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+ 
+        .container_main {
+            display: flex; /* Ou display: grid; se preferir */
+            align-items: center; /* Alinha verticalmente ao centro */
+            justify-content: center; /* Alinha horizontalmente ao centro */
+            margin: 50px 100px;
+        }
+ 
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 2px;
+            width: 50%;
+        }
+ 
+        .display {
+            background-color: yellow;
+            grid-column: span 4;
+            text-align: right;
+            padding: 2px;
+            border: 1px solid orange;
+           
+ 
+        }
+ 
+        .button {
+            align-items: center;
+            padding: 2px;
+            text-align: center;
+            border: 1px solid black;
+        }
+ 
+        .button_del {
+            align-items: center;
+            padding: 2px;
+            text-align: center;
+            border: 1px solid red;
+            background-color: tomato;
+        }
+ 
+ 
+ 
+    </style>
+</head>
+<body>
+    <div class="container_main">
+        <div class="container">
+            <div class="display"> 0 </div>
+   
+            <div class="button"> 1</div>
+            <div class="button"> 2</div>
+            <div class="button"> 3</div>
+            <div class="button"> 4</div>
+            <div class="button"> 5</div>
+            <div class="button"> 6</div>
+            <div class="button"> 7</div>
+            <div class="button"> 8</div>
+            <div class="button"> 9</div>
+            <div class="button"> 0</div>
+   
+            <div class="button"> + </div>
+            <div class="button"> - </div>
+            <div class="button"> / </div>
+            <div class="button"> * </div>
+            <div class="button"> = </div>
+   
+            <div class="button_del" >del</div>
+        </div>
+    </div>
+</body>
+</html>
